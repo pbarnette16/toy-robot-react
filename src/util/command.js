@@ -14,12 +14,12 @@ const commands = [
 {
     command: 'MOVE',
     validation: ['canMove'],
-    moveVector: moveOrientation,
+    moveVector: moveVector,
     action: 'moveObj'
 },
 {
     command: 'LEFT',
-    rotateVector: moveOrientation.map(obj => {
+    rotateVector: moveVector.map(obj => {
         return {
             facing: obj.facing
         }
@@ -27,7 +27,7 @@ const commands = [
     action: 'rotateLeft'
 }, {
     command: 'RIGHT',
-    rotateVector: moveOrientation.map(obj => {
+    rotateVector: moveVector.map(obj => {
         return {
             facing: obj.facing
         }
